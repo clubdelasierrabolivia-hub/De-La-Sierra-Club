@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club de la Sierra — Alianzas Estratégicas</title>
+  <meta name="description" content="Club de la Sierra: deporte, comunidad y alianzas estratégicas. Propuesta para convenios y networking." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="#top" id="brandLogo"></a>
+      <nav class="nav-links">
+        <a href="#club" data-i18n="nav.club"></a>
+        <a href="#historia" data-i18n="nav.history"></a>
+        <a href="#alianzas" data-i18n="nav.partners"></a>
+        <a href="#objetivos" data-i18n="nav.goals"></a>
+        <a href="#crecimiento" data-i18n="nav.growth"></a>
+        <a href="#propuesta" data-i18n="nav.proposal"></a>
+      </nav>
+      <div class="lang">
+        <button data-lang="es" class="active">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <span id="top"></span>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="kicker" data-bind="hero.kicker"></span>
+      <h1 data-bind="hero.title"></h1>
+      <p data-bind="hero.subtitle"></p>
+      <div class="hero-cta">
+        <a href="#propuesta" class="btn btn-primary" data-bind="hero.ctaPrimary"></a>
+        <a href="#club" class="btn btn-ghost" data-bind="hero.ctaSecondary"></a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <!-- CLUB: misión / visión / filosofía -->
+  <section id="club">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.clubKicker"></span>
+      <h2 data-i18n="sec.clubTitle"></h2>
+      <div class="grid g3" id="purpose" style="margin-top:34px"></div>
+    </div>
+  </section>
+
+  <!-- HISTORIA / LOGROS -->
+  <section id="historia">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.historyKicker"></span>
+      <h2 data-i18n="sec.historyTitle"></h2>
+      <p class="muted" data-i18n="sec.historySub"></p>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- TORNEOS -->
+  <section id="torneos" style="padding-top:0">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.tournKicker"></span>
+      <h2 data-i18n="sec.tournTitle"></h2>
+      <div class="grid g4" id="tournaments" style="margin-top:30px"></div>
+    </div>
+  </section>
+
+  <!-- ALIANZAS -->
+  <section id="alianzas">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.partnersKicker"></span>
+      <h2 data-i18n="sec.partnersTitle"></h2>
+      <p class="muted" data-i18n="sec.partnersSub"></p>
+      <div class="logos" id="partners"></div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section id="eventos" style="padding-top:0">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.eventsKicker"></span>
+      <h2 data-i18n="sec.eventsTitle"></h2>
+      <div class="grid g3" id="events" style="margin-top:30px"></div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section id="clientes" style="padding-top:0">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.clientsKicker"></span>
+      <h2 data-i18n="sec.clientsTitle"></h2>
+      <p class="muted" data-i18n="sec.clientsSub"></p>
+      <div class="logos" id="clients" style="margin-top:22px"></div>
+    </div>
+  </section>
+
+  <!-- OBJETIVOS Y METAS -->
+  <section id="objetivos">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.goalsKicker"></span>
+      <h2 data-i18n="sec.goalsTitle"></h2>
+      <div class="goals" id="goals" style="margin-top:30px"></div>
+    </div>
+  </section>
+
+  <!-- CRECIMIENTO Y PROYECCIÓN -->
+  <section id="crecimiento">
+    <div class="wrap reveal">
+      <span class="kicker" data-i18n="sec.growthKicker"></span>
+      <h2 data-i18n="sec.growthTitle"></h2>
+      <p class="muted" data-i18n="sec.growthSub"></p>
+      <div class="proj-wrap">
+        <div class="chart-card">
+          <svg id="chart" viewBox="0 0 620 320" width="100%" role="img" aria-label="Proyección de crecimiento"></svg>
+          <div class="chart-legend">
+            <span><i class="swatch" style="background:var(--accent)"></i><span data-i18n="chart.real"></span></span>
+            <span><i class="swatch" style="background:var(--gold)"></i><span data-i18n="chart.proj"></span></span>
+          </div>
+        </div>
+        <div>
+          <div id="projStats"></div>
+          <p class="proj-note" data-i18n="chart.note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPUESTA -->
+  <section id="propuesta">
+    <div class="wrap reveal">
+      <div class="proposal">
+        <span class="kicker" data-i18n="sec.proposalKicker"></span>
+        <h2 data-bind="proposal.title"></h2>
+        <p data-bind="proposal.text" style="max-width:70ch;color:var(--text)"></p>
+        <ul id="benefits"></ul>
+        <a href="#contacto" class="btn btn-primary" data-i18n="cta.talk"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" style="padding-top:0">
+    <div class="wrap reveal">
+      <div class="contact-card">
+        <h2 data-bind="contact.text"></h2>
+        <div class="contact-info" id="contactInfo"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span id="footerName"></span> · <span data-i18n="footer.rights"></span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

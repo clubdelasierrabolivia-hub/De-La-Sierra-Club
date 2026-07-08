@@ -1,6 +1,6 @@
 :root{
-  --bg:#0b1f16;          /* verde bosque profundo */
-  --bg-2:#0f2a1e;
+  --bg:#12402b;          /* verde bosque más claro */
+  --bg-2:#185435;
   --surface:#12352476;
   --card:#14392880;
   --line:#2e5a44;
@@ -18,7 +18,7 @@ html{scroll-behavior:smooth}
 body{
   font-family:var(--font);
   color:var(--text);
-  background:radial-gradient(1200px 600px at 80% -10%,#1a4732 0%,transparent 60%),
+  background:radial-gradient(1200px 600px at 80% -10%,#2a7d51 0%,transparent 60%),
              linear-gradient(160deg,var(--bg) 0%,var(--bg-2) 100%);
   background-attachment:fixed;
   line-height:1.6;
@@ -36,7 +36,7 @@ a{color:inherit}
 header.nav{
   position:sticky;top:0;z-index:50;
   backdrop-filter:blur(12px);
-  background:rgba(11,31,22,.72);
+  background:rgba(18,64,43,.72);
   border-bottom:1px solid var(--line);
 }
 .nav-in{display:flex;align-items:center;gap:18px;height:66px}

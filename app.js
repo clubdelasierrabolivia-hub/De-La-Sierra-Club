@@ -195,24 +195,24 @@ function drawChart() {
   for (let i = 0; i <= 4; i++) {
     const gv = (maxV / 4) * i;
     const gy = y(gv);
-    s += `<line x1="${pad.l}" y1="${gy}" x2="${W - pad.r}" y2="${gy}" stroke="#2e5a44" stroke-width="1" opacity=".4"/>`;
-    s += `<text x="${pad.l - 8}" y="${gy + 4}" fill="#9fbcaa" font-size="11" text-anchor="end">${Math.round(gv)}</text>`;
+    s += `<line x1="${pad.l}" y1="${gy}" x2="${W - pad.r}" y2="${gy}" stroke="#e2e0d6" stroke-width="1"/>`;
+    s += `<text x="${pad.l - 8}" y="${gy + 4}" fill="#8a8a80" font-size="11" text-anchor="end">${Math.round(gv)}</text>`;
   }
   // eje X (años)
   all.forEach((d) => {
-    s += `<text x="${x(d.year)}" y="${H - 12}" fill="#9fbcaa" font-size="11" text-anchor="middle">${d.year}</text>`;
+    s += `<text x="${x(d.year)}" y="${H - 12}" fill="#8a8a80" font-size="11" text-anchor="middle">${d.year}</text>`;
   });
   // línea histórica
   const histPts = history.map((d) => `${x(d.year)},${y(d.value)}`).join(" ");
-  s += `<polyline points="${histPts}" fill="none" stroke="#3ea675" stroke-width="3"/>`;
+  s += `<polyline points="${histPts}" fill="none" stroke="#7bbf2f" stroke-width="3.5"/>`;
   // línea proyectada (desde último histórico)
   const link = [history[history.length - 1], ...projected].map((d) => `${x(d.year)},${y(d.value)}`).join(" ");
-  s += `<polyline points="${link}" fill="none" stroke="#d8b26a" stroke-width="3" stroke-dasharray="7 6"/>`;
+  s += `<polyline points="${link}" fill="none" stroke="#7c5cf0" stroke-width="3.5" stroke-dasharray="7 6"/>`;
   // puntos
-  history.forEach((d) => { s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#3ea675"/>`; });
+  history.forEach((d) => { s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#7bbf2f"/>`; });
   projected.forEach((d) => {
-    s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#d8b26a"/>`;
-    s += `<text x="${x(d.year)}" y="${y(d.value) - 10}" fill="#e8cf9b" font-size="11" font-weight="700" text-anchor="middle">${d.value}</text>`;
+    s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#7c5cf0"/>`;
+    s += `<text x="${x(d.year)}" y="${y(d.value) - 10}" fill="#7c5cf0" font-size="11" font-weight="700" text-anchor="middle">${d.value}</text>`;
   });
   svg.innerHTML = s;
 }

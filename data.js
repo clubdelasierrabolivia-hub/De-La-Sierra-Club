@@ -11,8 +11,8 @@ const DATA = {
   brand: {
     name: "Club de la Sierra",
     tagline: {
-      es: "Deporte, comunidad y alianzas que trascienden",
-      en: "Sport, community and alliances that last",
+      es: "Las mejores conexiones nacen en la cancha",
+      en: "The best connections are born on the court",
     },
     // Reemplaza por la ruta de tu logo, ej: "assets/logo.png"
     logo: "",
@@ -20,17 +20,17 @@ const DATA = {
 
   // ---- Hero (portada) ---------------------------------------
   hero: {
-    kicker: { es: "Propuesta de Alianzas Estratégicas", en: "Strategic Partnership Proposal" },
+    kicker: { es: "Club De La Sierra", en: "Club De La Sierra" },
     title: {
-      es: "Donde el deporte se convierte en la mejor red de contactos",
-      en: "Where sport becomes the best network",
+      es: "Donde las mejores conexiones nacen en la cancha.",
+      en: "Where the best connections are born on the court.",
     },
     subtitle: {
-      es: "Un club con historia, comunidad y visión. Te invitamos a construir convenios que generan valor para tu marca y tu gente.",
-      en: "A club with history, community and vision. Let's build partnerships that create value for your brand and your people.",
+      es: "Más que un club deportivo, somos una comunidad que utiliza el deporte como punto de encuentro para conectar personas, impulsar ideas y generar un impacto positivo que trascienda la cancha.",
+      en: "More than a sports club, we are a community that uses sport as a meeting point to connect people, spark ideas and create a positive impact that goes beyond the court.",
     },
-    ctaPrimary: { es: "Ver la propuesta", en: "See the proposal" },
-    ctaSecondary: { es: "Conocer el club", en: "About the club" },
+    ctaPrimary: { es: "Conoce la propuesta", en: "See the proposal" },
+    ctaSecondary: { es: "Vive la experiencia", en: "Experience it" },
   },
 
   // ---- Cifras destacadas (edítalas con tus datos reales) ----

@@ -65,6 +65,13 @@ function render() {
     : `<span class="dot">S</span><span>${brand.name}</span>`;
   $("#footerName").textContent = brand.name;
 
+  // Foto de fondo del hero (si se define en data.hero.image)
+  const heroPhoto = $("#heroPhoto");
+  if (heroPhoto && DATA.hero.image) {
+    heroPhoto.style.backgroundImage =
+      `linear-gradient(180deg,rgba(11,42,30,.25),rgba(11,42,30,.5)), url("${DATA.hero.image}")`;
+  }
+
   // Textos con data-bind (contenido del DATA) y data-i18n (UI)
   document.querySelectorAll("[data-bind]").forEach((n) => {
     const val = n.getAttribute("data-bind").split(".").reduce((o, k) => o?.[k], DATA);

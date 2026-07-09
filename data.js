@@ -21,6 +21,8 @@ const DATA = {
 
   // ---- Hero (portada) ---------------------------------------
   hero: {
+    // Foto de fondo del hero (ej. "assets/hero.jpg"). Vacío = degradado verde.
+    image: "",
     kicker: { es: "Club De La Sierra", en: "Club De La Sierra" },
     title: {
       es: "Donde las mejores conexiones nacen en la cancha.",

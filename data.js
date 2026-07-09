@@ -45,24 +45,24 @@ const DATA = {
   // ---- Misión / Visión / Filosofía --------------------------
   purpose: {
     mission: {
-      title: { es: "Misión", en: "Mission" },
+      title: { es: "Nuestra Misión", en: "Our Mission" },
       text: {
-        es: "Impulsar el desarrollo personal, profesional y social de nuestra comunidad a través del deporte, creando un espacio donde competir, crecer y conectar sea una sola experiencia.",
-        en: "To drive the personal, professional and social growth of our community through sport, creating a space where competing, growing and connecting become one experience.",
+        es: "Crear experiencias que unan a las personas a través del deporte y las conviertan en relaciones, oportunidades y proyectos que generen un impacto positivo.",
+        en: "To create experiences that bring people together through sport and turn them into relationships, opportunities and projects that generate a positive impact.",
       },
     },
     vision: {
-      title: { es: "Visión", en: "Vision" },
+      title: { es: "Nuestra Visión", en: "Our Vision" },
       text: {
-        es: "Ser el club de referencia en Santa Cruz para el deporte y el networking de alto valor, reconocido por la calidad de su comunidad y sus alianzas.",
-        en: "To be Santa Cruz's leading club for sport and high-value networking, recognized for the quality of its community and partnerships.",
+        es: "Construir una comunidad de personas que construyen, donde el deporte sea el punto de encuentro para fortalecer relaciones, impulsar ideas y generar un impacto positivo que trascienda la cancha.",
+        en: "To build a community of builders, where sport is the meeting point to strengthen relationships, spark ideas and create a positive impact that goes beyond the court.",
       },
     },
     philosophy: {
-      title: { es: "Filosofía", en: "Philosophy" },
+      title: { es: "Nuestra Filosofía", en: "Our Philosophy" },
       text: {
-        es: "Creemos que las mejores relaciones — de negocios y de vida — nacen del esfuerzo compartido. El deporte une, disciplina y abre puertas.",
-        en: "We believe the best relationships — in business and in life — are born from shared effort. Sport unites, disciplines and opens doors.",
+        es: "El deporte tiene un poder único: reunir a personas que quizá nunca se habrían encontrado. Cuando comparten un desafío, una conversación o una experiencia, surgen relaciones auténticas — y de ellas nacen ideas, alianzas e iniciativas con impacto.",
+        en: "Sport has a unique power: it brings together people who might never have met. When they share a challenge, a conversation or an experience, authentic relationships emerge — and from them come ideas, alliances and initiatives with impact.",
       },
     },
   },

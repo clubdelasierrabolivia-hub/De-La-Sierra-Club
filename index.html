@@ -20,7 +20,6 @@
         <a href="#" data-tab="inicio" data-i18n="nav.home"></a>
         <a href="#" data-tab="club" data-i18n="nav.club"></a>
         <a href="#" data-tab="instalaciones" data-i18n="nav.facilities"></a>
-        <a href="#" data-tab="historia" data-i18n="nav.history"></a>
         <a href="#" data-tab="alianzas" data-i18n="nav.partners"></a>
         <a href="#" data-tab="eventos" data-i18n="nav.events"></a>
         <a href="#" data-tab="objetivos" data-i18n="nav.goals"></a>
@@ -55,8 +54,18 @@
     </div>
   </section>
 
+  <!-- SUB-NAV de "El Club" -->
+  <div class="subnav-wrap tab-section" data-tab="club">
+    <div class="wrap">
+      <div class="subnav">
+        <button data-subgroup="club" data-sub="esencia" data-i18n="sub.essence"></button>
+        <button data-subgroup="club" data-sub="historia" data-i18n="sub.history"></button>
+      </div>
+    </div>
+  </div>
+
   <!-- CLUB: misión / visión / filosofía -->
-  <section id="club" class="tab-section" data-tab="club">
+  <section id="club" class="tab-section" data-tab="club" data-subtab="esencia">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.clubKicker"></span>
       <h2 data-i18n="sec.clubTitle"></h2>
@@ -75,7 +84,7 @@
   </section>
 
   <!-- HISTORIA / LOGROS -->
-  <section id="historia" class="tab-section" data-tab="historia">
+  <section id="historia" class="tab-section" data-tab="club" data-subtab="historia">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.historyKicker"></span>
       <h2 data-i18n="sec.historyTitle"></h2>
@@ -85,7 +94,7 @@
   </section>
 
   <!-- TORNEOS -->
-  <section id="torneos" class="tab-section" data-tab="historia" style="padding-top:0">
+  <section id="torneos" class="tab-section" data-tab="club" data-subtab="historia" style="padding-top:0">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.tournKicker"></span>
       <h2 data-i18n="sec.tournTitle"></h2>

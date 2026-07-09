@@ -121,8 +121,15 @@ header.nav{
 .grid .card:nth-child(4n+2){background:var(--beige-bg);border-color:transparent}
 .grid .card:nth-child(4n+3){background:var(--cream);border-color:transparent}
 
+/* ---- Sub-navegación (pestañas internas) ---- */
+.subnav-wrap{padding:44px 0 0}
+.subnav{display:inline-flex;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px}
+.subnav button{background:none;border:0;padding:11px 24px;border-radius:999px;cursor:pointer;font-family:var(--font);font-weight:600;font-size:14px;color:var(--muted);transition:background .2s,color .2s}
+.subnav button:hover{color:var(--green)}
+.subnav button.active{background:var(--green);color:var(--beige)}
+
 /* ---- Purpose: Misión / Visión / Filosofía (destacado) ---- */
-#club{padding:104px 0}
+#club{padding:48px 0 96px}
 #club > .wrap > h2{font-size:clamp(36px,5.6vw,60px)}
 .purpose-big{display:flex;flex-direction:column;gap:20px}
 .purpose-big .card{

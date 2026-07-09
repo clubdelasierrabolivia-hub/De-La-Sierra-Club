@@ -5,8 +5,10 @@
 // Textos de interfaz (etiquetas de secciones) en ES / EN
 const UI = {
   "nav.home":      { es: "Inicio", en: "Home" },
-  "nav.club":      { es: "El Club", en: "The Club" },
+  "nav.club":      { es: "Quiénes somos", en: "About us" },
   "nav.events":    { es: "Eventos", en: "Events" },
+  "sub.essence":   { es: "Nuestra esencia", en: "Our essence" },
+  "sub.history":   { es: "Historia", en: "History" },
   "nav.facilities":{ es: "Instalaciones", en: "Facilities" },
   "nav.history":   { es: "Historia", en: "History" },
   "nav.partners":  { es: "Alianzas", en: "Partners" },
@@ -251,7 +253,25 @@ function setLang(l) {
 }
 document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
-/* ---------- Pestañas (tabs) ---------- */
+/* ---------- Pestañas (tabs) y sub-pestañas ---------- */
+const subState = {};
+
+function applySub(name) {
+  const subSecs = [...document.querySelectorAll(`.tab-section[data-tab="${name}"][data-subtab]`)];
+  if (!subSecs.length) return;
+  const subs = [...new Set(subSecs.map((s) => s.getAttribute("data-subtab")))];
+  let cur = subState[name];
+  if (!subs.includes(cur)) cur = subs[0];
+  subState[name] = cur;
+  subSecs.forEach((s) => {
+    const on = s.getAttribute("data-subtab") === cur;
+    s.style.display = on ? "" : "none";
+    if (on) s.querySelectorAll(".reveal").forEach((r) => r.classList.add("in"));
+  });
+  document.querySelectorAll(`[data-sub][data-subgroup="${name}"]`).forEach((b) =>
+    b.classList.toggle("active", b.getAttribute("data-sub") === cur));
+}
+
 function showTab(name) {
   const sections = document.querySelectorAll(".tab-section");
   let found = false;
@@ -261,13 +281,23 @@ function showTab(name) {
     s.classList.toggle("is-active", on);
     if (on) s.querySelectorAll(".reveal").forEach((r) => r.classList.add("in"));
   });
-  if (!found) name = "inicio", document.querySelector('.tab-section[data-tab="inicio"]').classList.add("is-active");
+  if (!found) { name = "inicio"; document.querySelector('.tab-section[data-tab="inicio"]').classList.add("is-active"); }
   document.querySelectorAll(".nav-links a").forEach((a) =>
     a.classList.toggle("active", a.getAttribute("data-tab") === name));
+  applySub(name);
   localStorage.setItem("tab", name);
   window.scrollTo(0, 0);
 }
+
+function showSub(name, sub) {
+  subState[name] = sub;
+  applySub(name);
+  window.scrollTo(0, 0);
+}
+
 document.addEventListener("click", (e) => {
+  const subBtn = e.target.closest("[data-sub]");
+  if (subBtn) { e.preventDefault(); showSub(subBtn.getAttribute("data-subgroup"), subBtn.getAttribute("data-sub")); return; }
   const link = e.target.closest("[data-tab]");
   if (!link) return;
   e.preventDefault();

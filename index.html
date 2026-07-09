@@ -17,13 +17,20 @@
     <div class="wrap nav-in">
       <a class="logo" href="#" data-tab="inicio" id="brandLogo"></a>
       <nav class="nav-links">
-        <a href="#" data-tab="inicio" data-i18n="nav.home"></a>
-        <a href="#" data-tab="club" data-i18n="nav.club"></a>
-        <a href="#" data-tab="instalaciones" data-i18n="nav.facilities"></a>
-        <a href="#" data-tab="alianzas" data-i18n="nav.partners"></a>
-        <a href="#" data-tab="eventos" data-i18n="nav.events"></a>
-        <a href="#" data-tab="crecimiento" data-i18n="nav.growth"></a>
-        <a href="#" data-tab="propuesta" data-i18n="nav.proposal"></a>
+        <div class="nav-item"><a href="#" data-tab="inicio" data-i18n="nav.home"></a></div>
+        <div class="nav-item has-dropdown">
+          <a href="#" data-tab="club" data-i18n="nav.club"></a>
+          <div class="dropdown">
+            <a href="#" data-tab="club" data-sub="esencia" data-i18n="sub.essence"></a>
+            <a href="#" data-tab="club" data-sub="historia" data-i18n="sub.history"></a>
+            <a href="#" data-tab="club" data-sub="objetivos" data-i18n="sub.goals"></a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="#" data-tab="instalaciones" data-i18n="nav.facilities"></a></div>
+        <div class="nav-item"><a href="#" data-tab="alianzas" data-i18n="nav.partners"></a></div>
+        <div class="nav-item"><a href="#" data-tab="eventos" data-i18n="nav.events"></a></div>
+        <div class="nav-item"><a href="#" data-tab="crecimiento" data-i18n="nav.growth"></a></div>
+        <div class="nav-item"><a href="#" data-tab="propuesta" data-i18n="nav.proposal"></a></div>
       </nav>
       <div class="lang">
         <button data-lang="es" class="active">ES</button>

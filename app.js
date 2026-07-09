@@ -297,12 +297,17 @@ function showSub(name, sub) {
 }
 
 document.addEventListener("click", (e) => {
-  const subBtn = e.target.closest("[data-sub]");
-  if (subBtn) { e.preventDefault(); showSub(subBtn.getAttribute("data-subgroup"), subBtn.getAttribute("data-sub")); return; }
+  // Píldoras internas (sub-nav dentro de la sección)
+  const pill = e.target.closest("[data-subgroup]");
+  if (pill) { e.preventDefault(); showSub(pill.getAttribute("data-subgroup"), pill.getAttribute("data-sub")); return; }
+  // Enlaces de pestaña (incluye items del dropdown que llevan data-tab + data-sub)
   const link = e.target.closest("[data-tab]");
   if (!link) return;
   e.preventDefault();
-  showTab(link.getAttribute("data-tab"));
+  const tab = link.getAttribute("data-tab");
+  const sub = link.getAttribute("data-sub");
+  if (sub) subState[tab] = sub;
+  showTab(tab);
 });
 
 /* ---------- Reveal on scroll ---------- */

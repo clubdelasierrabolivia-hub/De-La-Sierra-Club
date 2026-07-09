@@ -5,6 +5,7 @@
 // Textos de interfaz (etiquetas de secciones) en ES / EN
 const UI = {
   "nav.club":      { es: "El Club", en: "The Club" },
+  "nav.facilities":{ es: "Instalaciones", en: "Facilities" },
   "nav.history":   { es: "Historia", en: "History" },
   "nav.partners":  { es: "Alianzas", en: "Partners" },
   "nav.goals":     { es: "Objetivos", en: "Goals" },
@@ -13,6 +14,10 @@ const UI = {
 
   "sec.clubKicker":    { es: "Quiénes somos", en: "Who we are" },
   "sec.clubTitle":     { es: "Nuestra esencia", en: "Our essence" },
+
+  "sec.facilKicker":   { es: "El espacio", en: "The space" },
+  "sec.facilTitle":    { es: "Instalaciones de primer nivel", en: "First-class facilities" },
+  "sec.facilSub":      { es: "Un entorno natural, moderno y sofisticado, diseñado para competir, conectar y crecer.", en: "A natural, modern and sophisticated environment, designed to compete, connect and grow." },
 
   "sec.historyKicker": { es: "Trayectoria", en: "Track record" },
   "sec.historyTitle":  { es: "Nuestra historia y logros", en: "Our history & milestones" },
@@ -95,6 +100,17 @@ function render() {
     const p = DATA.purpose[k];
     purpose.appendChild(el("div", "card", `<div class="ico">${icons[k]}</div><h3>${t(p.title)}</h3><p class="muted">${t(p.text)}</p>`));
   });
+
+  // Galería de instalaciones
+  const gal = $("#gallery");
+  if (gal && DATA.gallery) {
+    gal.innerHTML = "";
+    DATA.gallery.forEach((g) => {
+      const tile = el("figure", "gtile" + (g.big ? " gtile-big" : ""),
+        `<img src="${g.img}" alt="${t(g.caption)}" loading="lazy"/><figcaption>${t(g.caption)}</figcaption>`);
+      gal.appendChild(tile);
+    });
+  }
 
   // Timeline
   const tl = $("#timeline"); tl.innerHTML = "";

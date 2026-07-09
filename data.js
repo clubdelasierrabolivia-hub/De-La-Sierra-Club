@@ -168,6 +168,18 @@ const DATA = {
     projectYears: [2027, 2029, 2031],
   },
 
+  // ---- Galería de instalaciones -----------------------------
+  gallery: [
+    { img: "assets/photos/aerea-dia.jpg", caption: { es: "El complejo", en: "The complex" }, big: true },
+    { img: "assets/photos/canchas-noche.jpg", caption: { es: "Canchas iluminadas", en: "Lit courts" } },
+    { img: "assets/photos/canchas-dia.jpg", caption: { es: "Pádel & Pickleball", en: "Padel & Pickleball" } },
+    { img: "assets/photos/comunidad-mesa.jpg", caption: { es: "Espacios para conectar", en: "Spaces to connect" } },
+    { img: "assets/photos/lounge.jpg", caption: { es: "Club house", en: "Club house" } },
+    { img: "assets/photos/gimnasio.jpg", caption: { es: "Gimnasio", en: "Gym" } },
+    { img: "assets/photos/wellness.jpg", caption: { es: "Wellness & relax", en: "Wellness & relax" } },
+    { img: "assets/photos/bar.jpg", caption: { es: "Bar & cafetería", en: "Bar & café" } },
+  ],
+
   // ---- Propuesta de alianza (destacada, ej. CAINCO) ---------
   proposal: {
     title: { es: "Una alianza a la medida de CAINCO", en: "A partnership tailored for CAINCO" },

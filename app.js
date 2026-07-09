@@ -103,12 +103,11 @@ function render() {
     stats.appendChild(el("div", "stat", `<div class="num">${s.value}${est}</div><div class="lbl">${t(s.label)}</div>`));
   });
 
-  // Propósito
+  // Propósito (esencia — estilo casual, sin cuadros)
   const purpose = $("#purpose"); purpose.innerHTML = "";
   ["mission", "vision", "philosophy"].forEach((k) => {
     const p = DATA.purpose[k];
-    const media = p.img ? `<img class="p-photo" src="${p.img}" alt="${t(p.title)}" loading="lazy"/>` : "";
-    purpose.appendChild(el("div", "card", `${media}<h3>${t(p.title)}</h3><p class="muted">${t(p.text)}</p>`));
+    purpose.appendChild(el("div", "essence-item", `<h3>${t(p.title)}</h3><p>${t(p.text)}</p>`));
   });
 
   // Galería de instalaciones

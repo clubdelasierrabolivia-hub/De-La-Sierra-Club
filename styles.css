@@ -96,6 +96,13 @@ header.nav{
 .hero p{font-size:clamp(17px,2.1vw,21px);color:var(--muted);max-width:54ch;margin-bottom:34px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 
+/* ---- Esencia (misión/visión/filosofía, casual, sin cuadros) ---- */
+.essence{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+.essence-item h3{font-family:var(--font-title);font-size:clamp(21px,2.3vw,27px);color:var(--green);font-weight:600;margin-bottom:14px;letter-spacing:-.01em}
+.essence-item h3::before{content:"";display:block;width:36px;height:3px;background:var(--lime);border-radius:2px;margin-bottom:16px}
+.essence-item p{color:var(--muted);font-size:clamp(15px,1.5vw,17px);line-height:1.75}
+@media(max-width:820px){.essence{grid-template-columns:1fr;gap:30px;margin-top:44px;padding-top:34px}}
+
 /* ---- Hero photo band (estilo Meadowell) ---- */
 .hero-photo{
   position:relative;height:clamp(340px,54vw,600px);margin-top:20px;overflow:hidden;

@@ -183,15 +183,24 @@ const DATA = {
   },
 
   // ---- Galería de instalaciones -----------------------------
+  // Cada categoría tiene su portada (img) y una galería de fotos (photos).
   gallery: [
-    { img: "assets/photos/aerea-dia.jpg", caption: { es: "El complejo", en: "The complex" }, big: true },
-    { img: "assets/photos/canchas-noche.jpg", caption: { es: "Canchas iluminadas", en: "Lit courts" } },
-    { img: "assets/photos/canchas-dia.jpg", caption: { es: "Pádel & Pickleball", en: "Padel & Pickleball" } },
-    { img: "assets/photos/comunidad-mesa.jpg", caption: { es: "Espacios para conectar", en: "Spaces to connect" } },
-    { img: "assets/photos/lounge.jpg", caption: { es: "Club house", en: "Club house" } },
-    { img: "assets/photos/gimnasio.jpg", caption: { es: "Gimnasio", en: "Gym" } },
-    { img: "assets/photos/wellness.jpg", caption: { es: "Wellness & relax", en: "Wellness & relax" } },
-    { img: "assets/photos/bar.jpg", caption: { es: "Bar & cafetería", en: "Bar & café" } },
+    { img: "assets/photos/aerea-dia.jpg", caption: { es: "El complejo", en: "The complex" }, big: true,
+      photos: ["assets/photos/g/aereas-1.jpg","assets/photos/g/aereas-2.jpg","assets/photos/g/aereas-3.jpg","assets/photos/g/aereas-4.jpg"] },
+    { img: "assets/photos/canchas-noche.jpg", caption: { es: "Canchas iluminadas", en: "Lit courts" },
+      photos: ["assets/photos/g/canchas-noche-1.jpg","assets/photos/g/canchas-noche-2.jpg","assets/photos/g/canchas-noche-3.jpg","assets/photos/g/canchas-noche-4.jpg"] },
+    { img: "assets/photos/canchas-dia.jpg", caption: { es: "Pádel & Pickleball", en: "Padel & Pickleball" },
+      photos: ["assets/photos/g/canchas-dia-1.jpg","assets/photos/g/canchas-dia-2.jpg","assets/photos/g/canchas-dia-3.jpg","assets/photos/g/canchas-dia-4.jpg"] },
+    { img: "assets/photos/comunidad-mesa.jpg", caption: { es: "Espacios para conectar", en: "Spaces to connect" },
+      photos: ["assets/photos/g/comunidad-1.jpg","assets/photos/g/comunidad-2.jpg","assets/photos/g/comunidad-3.jpg","assets/photos/g/comunidad-4.jpg"] },
+    { img: "assets/photos/lounge.jpg", caption: { es: "Club house", en: "Club house" },
+      photos: ["assets/photos/g/lounge-1.jpg","assets/photos/g/lounge-2.jpg","assets/photos/g/lounge-3.jpg","assets/photos/g/lounge-4.jpg"] },
+    { img: "assets/photos/gimnasio.jpg", caption: { es: "Gimnasio", en: "Gym" },
+      photos: ["assets/photos/g/gimnasio-1.jpg","assets/photos/g/gimnasio-2.jpg","assets/photos/g/gimnasio-3.jpg","assets/photos/g/gimnasio-4.jpg"] },
+    { img: "assets/photos/wellness.jpg", caption: { es: "Wellness & relax", en: "Wellness & relax" },
+      photos: ["assets/photos/g/wellness-1.jpg","assets/photos/g/wellness-2.jpg","assets/photos/g/wellness-3.jpg","assets/photos/g/wellness-4.jpg"] },
+    { img: "assets/photos/bar.jpg", caption: { es: "Bar & cafetería", en: "Bar & café" },
+      photos: ["assets/photos/g/bar-1.jpg","assets/photos/g/bar-2.jpg","assets/photos/g/bar-3.jpg","assets/photos/g/bar-4.jpg"] },
   ],
 
   // ---- Propuesta de alianza (destacada, ej. CAINCO) ---------

@@ -110,13 +110,16 @@ function render() {
     purpose.appendChild(el("div", "essence-item", `<h3>${t(p.title)}</h3><p>${t(p.text)}</p>`));
   });
 
-  // Galería de instalaciones
+  // Galería de instalaciones (cada categoría abre su propia galería)
   const gal = $("#gallery");
   if (gal && DATA.gallery) {
     gal.innerHTML = "";
-    DATA.gallery.forEach((g) => {
-      const tile = el("figure", "gtile" + (g.big ? " gtile-big" : ""),
-        `<img src="${g.img}" alt="${t(g.caption)}" loading="lazy"/><figcaption>${t(g.caption)}</figcaption>`);
+    DATA.gallery.forEach((g, i) => {
+      const n = g.photos ? g.photos.length : 0;
+      const badge = n ? `<span class="gcount">${n} ${LANG === "es" ? "fotos" : "photos"} ›</span>` : "";
+      const tile = el("figure", "gtile" + (g.big ? " gtile-big" : "") + (n ? " gclick" : ""),
+        `<img src="${g.img}" alt="${t(g.caption)}" loading="lazy"/><figcaption>${t(g.caption)}${badge}</figcaption>`);
+      if (n) tile.setAttribute("data-gindex", i);
       gal.appendChild(tile);
     });
   }
@@ -269,6 +272,28 @@ function setLang(l) {
 }
 document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
+/* ---------- Galería (lightbox por categoría) ---------- */
+function openGallery(i) {
+  const g = DATA.gallery[i];
+  if (!g || !g.photos) return;
+  const lb = $("#lightbox");
+  lb.querySelector(".lb-title").textContent = t(g.caption);
+  lb.querySelector(".lb-grid").innerHTML = g.photos
+    .map((p) => `<img src="${p}" alt="${t(g.caption)}" loading="lazy"/>`).join("");
+  lb.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeGallery() {
+  const lb = $("#lightbox");
+  if (lb) lb.classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.addEventListener("click", (e) => {
+  const tile = e.target.closest("[data-gindex]");
+  if (tile) { openGallery(+tile.getAttribute("data-gindex")); }
+});
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeGallery(); });
+
 /* ---------- Pestañas (tabs) y sub-pestañas ---------- */
 const subState = {};
 
@@ -337,4 +362,8 @@ document.addEventListener("DOMContentLoaded", () => {
   render();
   document.querySelectorAll(".reveal").forEach((n) => io.observe(n));
   showTab(localStorage.getItem("tab") || "inicio");
+  const lb = $("#lightbox");
+  if (lb) lb.addEventListener("click", (e) => {
+    if (e.target.closest("[data-lb-close]") || !e.target.closest(".lb-inner")) closeGallery();
+  });
 });

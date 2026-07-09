@@ -14,8 +14,9 @@ const DATA = {
       es: "Las mejores conexiones nacen en la cancha",
       en: "The best connections are born on the court",
     },
-    // Reemplaza por la ruta de tu logo, ej: "assets/logo.png"
-    logo: "",
+    // Logo oficial. Versión negra para la barra clara.
+    logo: "assets/logo-black.png",
+    logoWhite: "assets/logo-white.png",
   },
 
   // ---- Hero (portada) ---------------------------------------

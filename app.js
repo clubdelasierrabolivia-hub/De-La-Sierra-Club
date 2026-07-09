@@ -8,8 +8,13 @@ const UI = {
   "nav.club":      { es: "Quiénes somos", en: "About us" },
   "nav.events":    { es: "Eventos", en: "Events" },
   "sub.essence":   { es: "Nuestra esencia", en: "Our essence" },
+  "sub.team":      { es: "El equipo", en: "The team" },
   "sub.history":   { es: "Historia", en: "History" },
   "sub.goals":     { es: "Objetivos", en: "Goals" },
+
+  "sec.teamKicker": { es: "Las personas", en: "The people" },
+  "sec.teamTitle":  { es: "El equipo del club", en: "The club's team" },
+  "sec.teamSub":    { es: "Quienes hacen posible cada experiencia.", en: "The people behind every experience." },
   "nav.facilities":{ es: "Instalaciones", en: "Facilities" },
   "nav.history":   { es: "Historia", en: "History" },
   "nav.partners":  { es: "Alianzas", en: "Partners" },
@@ -149,6 +154,17 @@ function render() {
     const initials = c.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
     cl.appendChild(el("div", "person", `<div class="av">${initials}</div><div class="nm">${c.name}</div><div class="ro">${t(c.role)}</div>`));
   });
+
+  // Equipo
+  const tm = $("#team");
+  if (tm && DATA.team) {
+    tm.innerHTML = "";
+    DATA.team.forEach((p) => {
+      const initials = p.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+      const av = p.photo ? `<div class="av" style="background-image:url('${p.photo}');background-size:cover"></div>` : `<div class="av">${initials}</div>`;
+      tm.appendChild(el("div", "person", `${av}<div class="nm">${p.name}</div><div class="ro">${t(p.role)}</div>`));
+    });
+  }
 
   // Objetivos
   const g = $("#goals"); g.innerHTML = "";

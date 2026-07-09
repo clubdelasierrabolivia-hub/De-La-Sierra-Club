@@ -121,6 +121,17 @@ const DATA = {
     { name: "Nombre Apellido", role: { es: "Deportista destacado", en: "Featured athlete" } },
   ],
 
+  // ---- El equipo (empleados del club) -----------------------
+  // Agrega 'photo: "assets/photos/xxx.jpg"' para foto real; si no, muestra iniciales.
+  team: [
+    { name: "Nombre Apellido", role: { es: "Gerente General", en: "General Manager" }, photo: "" },
+    { name: "Nombre Apellido", role: { es: "Director Deportivo", en: "Sports Director" }, photo: "" },
+    { name: "Nombre Apellido", role: { es: "Coordinador de Eventos", en: "Events Coordinator" }, photo: "" },
+    { name: "Nombre Apellido", role: { es: "Marketing & Alianzas", en: "Marketing & Partnerships" }, photo: "" },
+    { name: "Nombre Apellido", role: { es: "Atención al Socio", en: "Member Services" }, photo: "" },
+    { name: "Nombre Apellido", role: { es: "Entrenador Principal", en: "Head Coach" }, photo: "" },
+  ],
+
   // ---- Objetivos y metas ------------------------------------
   goals: {
     short: {

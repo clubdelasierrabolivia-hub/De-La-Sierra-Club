@@ -15,15 +15,17 @@
   <!-- NAV -->
   <header class="nav">
     <div class="wrap nav-in">
-      <a class="logo" href="#top" id="brandLogo"></a>
+      <a class="logo" href="#" data-tab="inicio" id="brandLogo"></a>
       <nav class="nav-links">
-        <a href="#club" data-i18n="nav.club"></a>
-        <a href="#instalaciones" data-i18n="nav.facilities"></a>
-        <a href="#historia" data-i18n="nav.history"></a>
-        <a href="#alianzas" data-i18n="nav.partners"></a>
-        <a href="#objetivos" data-i18n="nav.goals"></a>
-        <a href="#crecimiento" data-i18n="nav.growth"></a>
-        <a href="#propuesta" data-i18n="nav.proposal"></a>
+        <a href="#" data-tab="inicio" data-i18n="nav.home"></a>
+        <a href="#" data-tab="club" data-i18n="nav.club"></a>
+        <a href="#" data-tab="instalaciones" data-i18n="nav.facilities"></a>
+        <a href="#" data-tab="historia" data-i18n="nav.history"></a>
+        <a href="#" data-tab="alianzas" data-i18n="nav.partners"></a>
+        <a href="#" data-tab="eventos" data-i18n="nav.events"></a>
+        <a href="#" data-tab="objetivos" data-i18n="nav.goals"></a>
+        <a href="#" data-tab="crecimiento" data-i18n="nav.growth"></a>
+        <a href="#" data-tab="propuesta" data-i18n="nav.proposal"></a>
       </nav>
       <div class="lang">
         <button data-lang="es" class="active">ES</button>
@@ -35,14 +37,14 @@
   <span id="top"></span>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero tab-section" data-tab="inicio">
     <div class="wrap">
       <span class="kicker" data-bind="hero.kicker"></span>
       <h1 data-bind="hero.title"></h1>
       <p data-bind="hero.subtitle"></p>
       <div class="hero-cta">
-        <a href="#propuesta" class="btn btn-primary" data-bind="hero.ctaPrimary"></a>
-        <a href="#club" class="btn btn-ghost" data-bind="hero.ctaSecondary"></a>
+        <a href="#" data-tab="propuesta" class="btn btn-primary" data-bind="hero.ctaPrimary"></a>
+        <a href="#" data-tab="instalaciones" class="btn btn-ghost" data-bind="hero.ctaSecondary"></a>
       </div>
     </div>
     <div class="hero-photo" id="heroPhoto">
@@ -54,7 +56,7 @@
   </section>
 
   <!-- CLUB: misión / visión / filosofía -->
-  <section id="club">
+  <section id="club" class="tab-section" data-tab="club">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.clubKicker"></span>
       <h2 data-i18n="sec.clubTitle"></h2>
@@ -63,7 +65,7 @@
   </section>
 
   <!-- INSTALACIONES (galería) -->
-  <section id="instalaciones">
+  <section id="instalaciones" class="tab-section" data-tab="instalaciones">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.facilKicker"></span>
       <h2 data-i18n="sec.facilTitle"></h2>
@@ -73,7 +75,7 @@
   </section>
 
   <!-- HISTORIA / LOGROS -->
-  <section id="historia">
+  <section id="historia" class="tab-section" data-tab="historia">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.historyKicker"></span>
       <h2 data-i18n="sec.historyTitle"></h2>
@@ -83,7 +85,7 @@
   </section>
 
   <!-- TORNEOS -->
-  <section id="torneos" style="padding-top:0">
+  <section id="torneos" class="tab-section" data-tab="historia" style="padding-top:0">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.tournKicker"></span>
       <h2 data-i18n="sec.tournTitle"></h2>
@@ -92,7 +94,7 @@
   </section>
 
   <!-- ALIANZAS -->
-  <section id="alianzas">
+  <section id="alianzas" class="tab-section" data-tab="alianzas">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.partnersKicker"></span>
       <h2 data-i18n="sec.partnersTitle"></h2>
@@ -102,7 +104,7 @@
   </section>
 
   <!-- EVENTOS -->
-  <section id="eventos" style="padding-top:0">
+  <section id="eventos" class="tab-section" data-tab="eventos">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.eventsKicker"></span>
       <h2 data-i18n="sec.eventsTitle"></h2>
@@ -111,7 +113,7 @@
   </section>
 
   <!-- CLIENTES -->
-  <section id="clientes" style="padding-top:0">
+  <section id="clientes" class="tab-section" data-tab="alianzas" style="padding-top:0">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.clientsKicker"></span>
       <h2 data-i18n="sec.clientsTitle"></h2>
@@ -121,7 +123,7 @@
   </section>
 
   <!-- OBJETIVOS Y METAS -->
-  <section id="objetivos">
+  <section id="objetivos" class="tab-section" data-tab="objetivos">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.goalsKicker"></span>
       <h2 data-i18n="sec.goalsTitle"></h2>
@@ -130,7 +132,7 @@
   </section>
 
   <!-- CRECIMIENTO Y PROYECCIÓN -->
-  <section id="crecimiento">
+  <section id="crecimiento" class="tab-section" data-tab="crecimiento">
     <div class="wrap reveal">
       <span class="kicker" data-i18n="sec.growthKicker"></span>
       <h2 data-i18n="sec.growthTitle"></h2>
@@ -152,7 +154,7 @@
   </section>
 
   <!-- PROPUESTA -->
-  <section id="propuesta">
+  <section id="propuesta" class="tab-section" data-tab="propuesta">
     <div class="wrap reveal">
       <div class="proposal">
         <span class="kicker" data-i18n="sec.proposalKicker"></span>
@@ -165,7 +167,7 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" style="padding-top:0">
+  <section id="contacto" class="tab-section" data-tab="propuesta" style="padding-top:0">
     <div class="wrap reveal">
       <div class="contact-card">
         <h2 data-bind="contact.text"></h2>

@@ -39,6 +39,13 @@ body{
 }
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
 section{padding:90px 0}
+
+/* ---- Pestañas (una sección visible a la vez) ---- */
+.tab-section{display:none}
+.tab-section.is-active{display:block;animation:tabin .5s ease}
+@keyframes tabin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.nav-links a.active{opacity:1;color:var(--green);position:relative}
+.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--green);border-radius:2px}
 h1,h2,h3{font-family:var(--font-title);line-height:1.08;font-weight:500;letter-spacing:-.015em}
 h2{font-size:clamp(30px,4.6vw,50px);margin-bottom:12px;color:var(--green)}
 .kicker{color:var(--teal);letter-spacing:.22em;text-transform:uppercase;font-size:12px;font-weight:600;font-family:var(--font)}
@@ -86,8 +93,9 @@ header.nav{
   background-size:cover;background-position:center;
   display:grid;place-items:center;
 }
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,42,30,.25),rgba(11,42,30,.45))}
-.hero-wordmark{position:relative;z-index:1;width:min(74%,760px);opacity:.97;filter:drop-shadow(0 6px 24px rgba(0,0,0,.25))}
+.hero-photo{filter:saturate(.92)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,48,35,.5),rgba(11,34,26,.66))}
+.hero-wordmark{position:relative;z-index:1;width:min(74%,760px);opacity:.96;filter:drop-shadow(0 6px 24px rgba(0,0,0,.3))}
 
 /* ---- Stats (banda verde elegante) ---- */
 .stats{
@@ -123,7 +131,7 @@ header.nav{
 }
 .purpose-big .card h3{font-size:clamp(32px,4.6vw,52px);line-height:1.04;margin:0 0 14px;font-weight:500}
 .purpose-big .card p{font-size:clamp(17px,2.1vw,22px);line-height:1.6}
-.purpose-big .card > .p-photo{grid-column:1;grid-row:1 / span 2;width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:16px}
+.purpose-big .card > .p-photo{grid-column:1;grid-row:1 / span 2;width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:16px;opacity:.82;filter:saturate(.9)}
 .purpose-big .card > h3{grid-column:2;grid-row:1;align-self:end}
 .purpose-big .card > p{grid-column:2;grid-row:2;align-self:start}
 .purpose-big .card:nth-child(1){background:var(--beige-bg)}
@@ -143,9 +151,9 @@ header.nav{
 
 /* ---- Tarjetas con foto (torneos / eventos) ---- */
 .photo-card{position:relative;border-radius:var(--radius);overflow:hidden;min-height:300px;display:flex;align-items:flex-end;color:#fff}
-.photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
-.photo-card:hover img{transform:scale(1.06)}
-.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,42,30,.05) 30%,rgba(11,42,30,.85))}
+.photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease;filter:saturate(.9)}
+.photo-card:hover img{transform:scale(1.05)}
+.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,42,30,.42) 20%,rgba(11,42,30,.86))}
 .photo-card .pc-body{position:relative;z-index:1;padding:26px}
 .photo-card .pc-body h3{color:#fff;font-size:22px;font-weight:500;margin-bottom:4px}
 .photo-card .pc-body p{color:#e2ecd9;font-size:14px}
@@ -234,7 +242,10 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
   .stat:nth-child(2)::after{display:none}
   .g3,.g4{grid-template-columns:1fr 1fr}
   .goals,.proj-wrap,.proposal ul{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .nav-in{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px}
+  .nav-links{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;gap:20px;margin:0;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .nav-links a{white-space:nowrap}
+  .nav-links a.active::after{bottom:-2px}
 }
 @media(max-width:560px){
   .g3,.g4,.stats,.logos{grid-template-columns:1fr}

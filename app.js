@@ -4,7 +4,9 @@
 
 // Textos de interfaz (etiquetas de secciones) en ES / EN
 const UI = {
+  "nav.home":      { es: "Inicio", en: "Home" },
   "nav.club":      { es: "El Club", en: "The Club" },
+  "nav.events":    { es: "Eventos", en: "Events" },
   "nav.facilities":{ es: "Instalaciones", en: "Facilities" },
   "nav.history":   { es: "Historia", en: "History" },
   "nav.partners":  { es: "Alianzas", en: "Partners" },
@@ -249,6 +251,29 @@ function setLang(l) {
 }
 document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
+/* ---------- Pestañas (tabs) ---------- */
+function showTab(name) {
+  const sections = document.querySelectorAll(".tab-section");
+  let found = false;
+  sections.forEach((s) => {
+    const on = s.getAttribute("data-tab") === name;
+    if (on) found = true;
+    s.classList.toggle("is-active", on);
+    if (on) s.querySelectorAll(".reveal").forEach((r) => r.classList.add("in"));
+  });
+  if (!found) name = "inicio", document.querySelector('.tab-section[data-tab="inicio"]').classList.add("is-active");
+  document.querySelectorAll(".nav-links a").forEach((a) =>
+    a.classList.toggle("active", a.getAttribute("data-tab") === name));
+  localStorage.setItem("tab", name);
+  window.scrollTo(0, 0);
+}
+document.addEventListener("click", (e) => {
+  const link = e.target.closest("[data-tab]");
+  if (!link) return;
+  e.preventDefault();
+  showTab(link.getAttribute("data-tab"));
+});
+
 /* ---------- Reveal on scroll ---------- */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
@@ -260,4 +285,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.lang = LANG;
   render();
   document.querySelectorAll(".reveal").forEach((n) => io.observe(n));
+  showTab(localStorage.getItem("tab") || "inicio");
 });

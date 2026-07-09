@@ -9,6 +9,7 @@ const UI = {
   "nav.events":    { es: "Eventos", en: "Events" },
   "sub.essence":   { es: "Nuestra esencia", en: "Our essence" },
   "sub.history":   { es: "Historia", en: "History" },
+  "sub.goals":     { es: "Objetivos", en: "Goals" },
   "nav.facilities":{ es: "Instalaciones", en: "Facilities" },
   "nav.history":   { es: "Historia", en: "History" },
   "nav.partners":  { es: "Alianzas", en: "Partners" },

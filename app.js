@@ -95,10 +95,10 @@ function render() {
 
   // Propósito
   const purpose = $("#purpose"); purpose.innerHTML = "";
-  const icons = { mission: "🎯", vision: "🔭", philosophy: "💡" };
   ["mission", "vision", "philosophy"].forEach((k) => {
     const p = DATA.purpose[k];
-    purpose.appendChild(el("div", "card", `<div class="ico">${icons[k]}</div><h3>${t(p.title)}</h3><p class="muted">${t(p.text)}</p>`));
+    const media = p.img ? `<img class="p-photo" src="${p.img}" alt="${t(p.title)}" loading="lazy"/>` : "";
+    purpose.appendChild(el("div", "card", `${media}<h3>${t(p.title)}</h3><p class="muted">${t(p.text)}</p>`));
   });
 
   // Galería de instalaciones
@@ -121,7 +121,7 @@ function render() {
   // Torneos
   const tr = $("#tournaments"); tr.innerHTML = "";
   DATA.tournaments.forEach((x) => {
-    tr.appendChild(el("div", "card", `<div class="ico">🏆</div><h3 style="font-size:18px">${t(x.name)}</h3><p class="muted">${t(x.meta)}</p>`));
+    tr.appendChild(el("article", "photo-card", `<img src="${x.img}" alt="${t(x.name)}" loading="lazy"/><div class="pc-body"><h3>${t(x.name)}</h3><p>${t(x.meta)}</p></div>`));
   });
 
   // Alianzas
@@ -134,9 +134,8 @@ function render() {
 
   // Eventos
   const ev = $("#events"); ev.innerHTML = "";
-  const eIcons = ["🤝", "🎾", "🎤"];
-  DATA.events.forEach((e, i) => {
-    ev.appendChild(el("div", "card", `<div class="ico">${eIcons[i % eIcons.length]}</div><h3 style="font-size:19px">${t(e.title)}</h3><p class="muted">${t(e.text)}</p>`));
+  DATA.events.forEach((e) => {
+    ev.appendChild(el("article", "photo-card", `<img src="${e.img}" alt="${t(e.title)}" loading="lazy"/><div class="pc-body"><h3>${t(e.title)}</h3><p>${t(e.text)}</p></div>`));
   });
 
   // Clientes

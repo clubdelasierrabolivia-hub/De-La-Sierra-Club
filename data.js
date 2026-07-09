@@ -22,7 +22,7 @@ const DATA = {
   // ---- Hero (portada) ---------------------------------------
   hero: {
     // Foto de fondo del hero (ej. "assets/hero.jpg"). Vacío = degradado verde.
-    image: "assets/hero-cover.jpg",
+    image: "assets/photos/aerea-noche.jpg",
     kicker: { es: "Club De La Sierra", en: "Club De La Sierra" },
     title: {
       es: "Donde las mejores conexiones nacen en la cancha.",
@@ -49,6 +49,7 @@ const DATA = {
   purpose: {
     mission: {
       title: { es: "Nuestra Misión", en: "Our Mission" },
+      img: "assets/photos/comunidad-mesa.jpg",
       text: {
         es: "Crear experiencias que unan a las personas a través del deporte y las conviertan en relaciones, oportunidades y proyectos que generen un impacto positivo.",
         en: "To create experiences that bring people together through sport and turn them into relationships, opportunities and projects that generate a positive impact.",
@@ -56,6 +57,7 @@ const DATA = {
     },
     vision: {
       title: { es: "Nuestra Visión", en: "Our Vision" },
+      img: "assets/photos/aerea-noche2.jpg",
       text: {
         es: "Construir una comunidad de personas que construyen, donde el deporte sea el punto de encuentro para fortalecer relaciones, impulsar ideas y generar un impacto positivo que trascienda la cancha.",
         en: "To build a community of builders, where sport is the meeting point to strengthen relationships, spark ideas and create a positive impact that goes beyond the court.",
@@ -63,6 +65,7 @@ const DATA = {
     },
     philosophy: {
       title: { es: "Nuestra Filosofía", en: "Our Philosophy" },
+      img: "assets/photos/canchas-noche2.jpg",
       text: {
         es: "El deporte tiene un poder único: reunir a personas que quizá nunca se habrían encontrado. Cuando comparten un desafío, una conversación o una experiencia, surgen relaciones auténticas — y de ellas nacen ideas, alianzas e iniciativas con impacto.",
         en: "Sport has a unique power: it brings together people who might never have met. When they share a challenge, a conversation or an experience, authentic relationships emerge — and from them come ideas, alliances and initiatives with impact.",
@@ -86,10 +89,10 @@ const DATA = {
 
   // ---- Torneos ----------------------------------------------
   tournaments: [
-    { name: { es: "Copa Sierra Abierta", en: "Sierra Open Cup" }, meta: { es: "Anual · +120 participantes", en: "Annual · 120+ players" } },
-    { name: { es: "Torneo de Verano", en: "Summer Tournament" }, meta: { es: "Temporada alta", en: "High season" } },
-    { name: { es: "Interclubes", en: "Interclub Series" }, meta: { es: "Competencia regional", en: "Regional competition" } },
-    { name: { es: "Torneo Corporativo", en: "Corporate Cup" }, meta: { es: "Empresas aliadas", en: "Partner companies" } },
+    { name: { es: "Copa Sierra Abierta", en: "Sierra Open Cup" }, meta: { es: "Anual · +120 participantes", en: "Annual · 120+ players" }, img: "assets/photos/canchas-noche.jpg" },
+    { name: { es: "Torneo de Verano", en: "Summer Tournament" }, meta: { es: "Temporada alta", en: "High season" }, img: "assets/photos/cancha-simetrica.jpg" },
+    { name: { es: "Interclubes", en: "Interclub Series" }, meta: { es: "Competencia regional", en: "Regional competition" }, img: "assets/photos/aerea-noche.jpg" },
+    { name: { es: "Torneo Corporativo", en: "Corporate Cup" }, meta: { es: "Empresas aliadas", en: "Partner companies" }, img: "assets/photos/canchas-noche2.jpg" },
   ],
 
   // ---- Alianzas (logos: pon rutas en assets/ o deja vacío) --
@@ -103,11 +106,11 @@ const DATA = {
   // ---- Eventos ----------------------------------------------
   events: [
     { title: { es: "Networking & Deporte", en: "Networking & Sport" },
-      text: { es: "Jornadas donde emprendedores compiten y conectan.", en: "Days where entrepreneurs compete and connect." } },
+      text: { es: "Jornadas donde emprendedores compiten y conectan.", en: "Days where entrepreneurs compete and connect." }, img: "assets/photos/comunidad-mesa.jpg" },
     { title: { es: "Clínicas y entrenamientos", en: "Clinics & training" },
-      text: { es: "Sesiones con profesionales invitados.", en: "Sessions with guest professionals." } },
+      text: { es: "Sesiones con profesionales invitados.", en: "Sessions with guest professionals." }, img: "assets/photos/lounge.jpg" },
     { title: { es: "Eventos corporativos", en: "Corporate events" },
-      text: { es: "Espacios para que las empresas activen su marca.", en: "Spaces for companies to activate their brand." } },
+      text: { es: "Espacios para que las empresas activen su marca.", en: "Spaces for companies to activate their brand." }, img: "assets/photos/bar.jpg" },
   ],
 
   // ---- Clientes / personas importantes ----------------------

@@ -118,15 +118,14 @@ header.nav{
 #club > .wrap > h2{font-size:clamp(36px,5.6vw,60px)}
 .purpose-big{display:flex;flex-direction:column;gap:20px}
 .purpose-big .card{
-  border:0;border-radius:24px;padding:clamp(32px,5vw,60px);
-  display:grid;grid-template-columns:minmax(200px,300px) 1fr;gap:clamp(20px,4vw,52px);align-items:center;
+  border:0;border-radius:24px;padding:clamp(24px,3.5vw,40px);
+  display:grid;grid-template-columns:minmax(240px,420px) 1fr;gap:clamp(24px,4vw,52px);align-items:stretch;
 }
-.purpose-big .card .ico{font-size:clamp(44px,6vw,72px);margin:0;opacity:.9}
-.purpose-big .card h3{font-size:clamp(32px,4.6vw,52px);line-height:1.04;margin:16px 0 0;font-weight:500}
+.purpose-big .card h3{font-size:clamp(32px,4.6vw,52px);line-height:1.04;margin:0 0 14px;font-weight:500}
 .purpose-big .card p{font-size:clamp(17px,2.1vw,22px);line-height:1.6}
-.purpose-big .card > .ico{grid-row:1;grid-column:1}
-.purpose-big .card > h3{grid-row:2;grid-column:1;align-self:start}
-.purpose-big .card > p{grid-row:1 / span 2;grid-column:2}
+.purpose-big .card > .p-photo{grid-column:1;grid-row:1 / span 2;width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:16px}
+.purpose-big .card > h3{grid-column:2;grid-row:1;align-self:end}
+.purpose-big .card > p{grid-column:2;grid-row:2;align-self:start}
 .purpose-big .card:nth-child(1){background:var(--beige-bg)}
 .purpose-big .card:nth-child(1) h3{color:var(--green)}
 .purpose-big .card:nth-child(2){background:var(--cream)}
@@ -136,10 +135,20 @@ header.nav{
 .purpose-big .card:nth-child(3) p{color:#cdd8cd}
 .purpose-big .card:hover{transform:translateY(-3px)}
 @media(max-width:720px){
-  .purpose-big .card{grid-template-columns:1fr;gap:8px;text-align:left}
-  .purpose-big .card > p{grid-row:auto;grid-column:1;margin-top:12px}
-  .purpose-big .card > h3{grid-row:auto}
+  .purpose-big .card{grid-template-columns:1fr;gap:18px}
+  .purpose-big .card > .p-photo{grid-row:auto;grid-column:1;min-height:200px}
+  .purpose-big .card > h3{grid-row:auto;grid-column:1}
+  .purpose-big .card > p{grid-row:auto;grid-column:1}
 }
+
+/* ---- Tarjetas con foto (torneos / eventos) ---- */
+.photo-card{position:relative;border-radius:var(--radius);overflow:hidden;min-height:300px;display:flex;align-items:flex-end;color:#fff}
+.photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.photo-card:hover img{transform:scale(1.06)}
+.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,42,30,.05) 30%,rgba(11,42,30,.85))}
+.photo-card .pc-body{position:relative;z-index:1;padding:26px}
+.photo-card .pc-body h3{color:#fff;font-size:22px;font-weight:500;margin-bottom:4px}
+.photo-card .pc-body p{color:#e2ecd9;font-size:14px}
 
 /* ---- Galería de instalaciones ---- */
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
@@ -193,7 +202,11 @@ header.nav{
 .proj-note{font-size:13px;color:var(--muted);margin-top:16px;font-style:italic}
 
 /* ---- Proposal ---- */
-.proposal{background:var(--green);color:var(--beige);border-radius:26px;padding:56px}
+.proposal{position:relative;overflow:hidden;background:var(--green);color:var(--beige);border-radius:26px;padding:56px}
+.proposal::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(rgba(12,90,66,.9),rgba(10,42,31,.92)),url("assets/photos/canchas-noche2.jpg");
+  background-size:cover;background-position:center}
+.proposal > *{position:relative;z-index:1}
 .proposal .kicker{color:var(--lime)}
 .proposal h2{color:var(--beige)}
 .proposal p{color:#cdd8cd}

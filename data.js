@@ -97,10 +97,10 @@ const DATA = {
 
   // ---- Alianzas (logos: pon rutas en assets/ o deja vacío) --
   partners: [
-    { name: "CAINCO", logo: "", note: { es: "Alianza objetivo", en: "Target partnership" } },
     { name: "Marca Aliada 1", logo: "" },
     { name: "Marca Aliada 2", logo: "" },
     { name: "Marca Aliada 3", logo: "" },
+    { name: "Marca Aliada 4", logo: "" },
   ],
 
   // ---- Eventos ----------------------------------------------
@@ -205,10 +205,10 @@ const DATA = {
 
   // ---- Propuesta de alianza (destacada, ej. CAINCO) ---------
   proposal: {
-    title: { es: "Una alianza a la medida de CAINCO", en: "A partnership tailored for CAINCO" },
+    title: { es: "Una alianza a la medida de tu empresa", en: "A partnership tailored to your company" },
     text: {
-      es: "Proponemos que los eventos de CAINCO — especialmente los de sus miembros más jóvenes y emprendedores — se realicen en el Club de la Sierra, uniendo deporte y networking en un mismo espacio.",
-      en: "We propose that CAINCO's events — especially those for its younger, entrepreneurial members — take place at Club de la Sierra, uniting sport and networking in one space.",
+      es: "Proponemos que los eventos de tu empresa — especialmente los de sus miembros más jóvenes y emprendedores — se realicen en el Club de la Sierra, uniendo deporte y networking en un mismo espacio.",
+      en: "We propose that your company's events — especially those for its younger, entrepreneurial members — take place at Club de la Sierra, uniting sport and networking in one space.",
     },
     benefits: {
       es: [

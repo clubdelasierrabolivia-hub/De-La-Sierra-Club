@@ -204,15 +204,15 @@ function drawChart() {
   });
   // línea histórica
   const histPts = history.map((d) => `${x(d.year)},${y(d.value)}`).join(" ");
-  s += `<polyline points="${histPts}" fill="none" stroke="#7bbf2f" stroke-width="3.5"/>`;
+  s += `<polyline points="${histPts}" fill="none" stroke="#0C5A42" stroke-width="3.5"/>`;
   // línea proyectada (desde último histórico)
   const link = [history[history.length - 1], ...projected].map((d) => `${x(d.year)},${y(d.value)}`).join(" ");
-  s += `<polyline points="${link}" fill="none" stroke="#7c5cf0" stroke-width="3.5" stroke-dasharray="7 6"/>`;
+  s += `<polyline points="${link}" fill="none" stroke="#163F7A" stroke-width="3.5" stroke-dasharray="7 6"/>`;
   // puntos
-  history.forEach((d) => { s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#7bbf2f"/>`; });
+  history.forEach((d) => { s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#0C5A42"/>`; });
   projected.forEach((d) => {
-    s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#7c5cf0"/>`;
-    s += `<text x="${x(d.year)}" y="${y(d.value) - 10}" fill="#7c5cf0" font-size="11" font-weight="700" text-anchor="middle">${d.value}</text>`;
+    s += `<circle cx="${x(d.year)}" cy="${y(d.value)}" r="4.5" fill="#163F7A"/>`;
+    s += `<text x="${x(d.year)}" y="${y(d.value) - 10}" fill="#163F7A" font-size="11" font-weight="700" text-anchor="middle">${d.value}</text>`;
   });
   svg.innerHTML = s;
 }

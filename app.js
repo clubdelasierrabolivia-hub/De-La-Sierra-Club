@@ -136,12 +136,12 @@ function render() {
     tr.appendChild(el("article", "photo-card", `<img src="${x.img}" alt="${t(x.name)}" loading="lazy"/><div class="pc-body"><h3>${t(x.name)}</h3><p>${t(x.meta)}</p></div>`));
   });
 
-  // Alianzas / empresas con las que trabajamos
+  // Alianzas / empresas con las que trabajamos (carrusel: logo arriba, desc abajo)
   const pt = $("#partners"); pt.innerHTML = "";
   DATA.partners.forEach((p) => {
-    const head = p.logo ? `<img class="partner-logo" src="${p.logo}" alt="${p.name}"/>` : `<h3>${p.name}</h3>`;
-    const desc = p.desc ? `<p class="muted">${t(p.desc)}</p>` : "";
-    pt.appendChild(el("div", "card partner-card", `${head}${desc}`));
+    const logo = p.logo ? `<img src="${p.logo}" alt="${p.name}"/>` : `<span class="pi-name">${p.name}</span>`;
+    const desc = p.desc ? `<div class="pi-desc">${t(p.desc)}</div>` : "";
+    pt.appendChild(el("div", "partner-item", `<div class="pi-logo">${logo}</div>${desc}`));
   });
 
   // Eventos
@@ -366,4 +366,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (lb) lb.addEventListener("click", (e) => {
     if (e.target.closest("[data-lb-close]") || !e.target.closest(".lb-inner")) closeGallery();
   });
+  // Flechas del carrusel de empresas
+  const strip = $("#partners");
+  const prev = document.querySelector(".pc-prev");
+  const next = document.querySelector(".pc-next");
+  if (strip && prev && next) {
+    prev.addEventListener("click", () => strip.scrollBy({ left: -260, behavior: "smooth" }));
+    next.addEventListener("click", () => strip.scrollBy({ left: 260, behavior: "smooth" }));
+  }
 });

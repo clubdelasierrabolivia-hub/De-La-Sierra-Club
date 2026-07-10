@@ -98,7 +98,7 @@ const DATA = {
   // ---- Alianzas (logos: pon rutas en assets/ o deja vacío) --
   partners: [
     { name: "Nacional (COPELME)", logo: "", desc: { es: "Grupo aliado", en: "Partner group" } },
-    { name: "ReplayMe", logo: "assets/logos/replayme.svg", desc: { es: "Cámaras interactivas en canchas", en: "Interactive court cameras" } },
+    { name: "ReplayMe", logo: "assets/logos/replayme.jpg", desc: { es: "Cámaras interactivas en canchas", en: "Interactive court cameras" } },
     { name: "Reva", logo: "", desc: { es: "Reservas online", en: "Online booking" } },
     { name: "Los Tanos", logo: "", desc: { es: "Canchas de pádel y fútbol", en: "Padel & football courts" } },
     { name: "Synergy / SynerX", logo: "", desc: { es: "Construcción del club", en: "Club construction" } },

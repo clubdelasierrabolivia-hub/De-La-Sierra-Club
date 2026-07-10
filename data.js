@@ -101,7 +101,7 @@ const DATA = {
     { name: "ReplayMe", logo: "assets/logos/replayme.jpg", desc: { es: "Cámaras interactivas en canchas", en: "Interactive court cameras" } },
     { name: "Reva", logo: "assets/logos/reva.jpg", desc: { es: "Reservas online", en: "Online booking" } },
     { name: "Los Tanos", logo: "assets/logos/lostanos.jpg", desc: { es: "Canchas de pádel y fútbol", en: "Padel & football courts" } },
-    { name: "Synergy / SynerX", logo: "", desc: { es: "Construcción del club", en: "Club construction" } },
+    { name: "Synergy / SynerX", logo: "assets/logos/synergy.jpg", desc: { es: "Construcción del club", en: "Club construction" } },
     { name: "La Cuisine", logo: "", desc: { es: "Materiales inmobiliarios", en: "Building materials" } },
   ],
 

@@ -217,6 +217,11 @@ header.nav{
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
 }
 
+/* ---- Empresas / aliados ---- */
+.partner-card h3{font-size:22px;color:var(--green);margin-bottom:8px}
+.partner-card .partner-logo{max-height:52px;max-width:70%;margin-bottom:12px;display:block}
+.grid .partner-card:nth-child(4n+3) h3{color:var(--lime)}
+
 /* ---- Timeline ---- */
 .timeline{position:relative;margin-top:44px;padding-left:24px;border-left:2px solid var(--beige)}
 .tl-item{position:relative;padding:0 0 34px 28px}

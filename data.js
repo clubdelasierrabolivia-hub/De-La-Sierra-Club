@@ -97,10 +97,12 @@ const DATA = {
 
   // ---- Alianzas (logos: pon rutas en assets/ o deja vacío) --
   partners: [
-    { name: "Marca Aliada 1", logo: "" },
-    { name: "Marca Aliada 2", logo: "" },
-    { name: "Marca Aliada 3", logo: "" },
-    { name: "Marca Aliada 4", logo: "" },
+    { name: "Nacional (COPELME)", logo: "", desc: { es: "Grupo aliado", en: "Partner group" } },
+    { name: "ReplayMe", logo: "", desc: { es: "Sistema interactivo de cámaras en canchas de pádel y fútbol", en: "Interactive camera system for padel & football courts" } },
+    { name: "Reva", logo: "", desc: { es: "Sistema de reservas online", en: "Online booking system" } },
+    { name: "Los Tanos", logo: "", desc: { es: "Instalación de canchas de pádel y fútbol", en: "Padel & football court installation" } },
+    { name: "Synergy / SynerX", logo: "", desc: { es: "Construcción de todo el club", en: "Construction of the entire club" } },
+    { name: "La Cuisine", logo: "", desc: { es: "Materiales inmobiliarios", en: "Building & interior materials" } },
   ],
 
   // ---- Eventos ----------------------------------------------

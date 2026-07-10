@@ -37,8 +37,8 @@ const UI = {
   "sec.tournTitle":    { es: "Torneos realizados", en: "Tournaments held" },
 
   "sec.partnersKicker":{ es: "Confianza", en: "Trust" },
-  "sec.partnersTitle": { es: "Alianzas y convenios", en: "Partnerships & agreements" },
-  "sec.partnersSub":   { es: "Marcas y organizaciones que crecen con nosotros.", en: "Brands and organizations growing with us." },
+  "sec.partnersTitle": { es: "Empresas con las que trabajamos", en: "Companies we work with" },
+  "sec.partnersSub":   { es: "Los aliados que hacen posible la experiencia Club de la Sierra.", en: "The partners that make the Club de la Sierra experience possible." },
 
   "sec.eventsKicker":  { es: "Experiencias", en: "Experiences" },
   "sec.eventsTitle":   { es: "Eventos que hacemos", en: "Events we host" },
@@ -136,12 +136,12 @@ function render() {
     tr.appendChild(el("article", "photo-card", `<img src="${x.img}" alt="${t(x.name)}" loading="lazy"/><div class="pc-body"><h3>${t(x.name)}</h3><p>${t(x.meta)}</p></div>`));
   });
 
-  // Alianzas
+  // Alianzas / empresas con las que trabajamos
   const pt = $("#partners"); pt.innerHTML = "";
   DATA.partners.forEach((p) => {
-    const inner = p.logo ? `<img src="${p.logo}" alt="${p.name}"/>` : p.name;
-    const note = p.note ? `<small>${t(p.note)}</small>` : "";
-    pt.appendChild(el("div", "logo-box", `${inner}${note}`));
+    const head = p.logo ? `<img class="partner-logo" src="${p.logo}" alt="${p.name}"/>` : `<h3>${p.name}</h3>`;
+    const desc = p.desc ? `<p class="muted">${t(p.desc)}</p>` : "";
+    pt.appendChild(el("div", "card partner-card", `${head}${desc}`));
   });
 
   // Eventos
